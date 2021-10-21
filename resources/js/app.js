@@ -21,11 +21,18 @@ library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
 
-// import BootstrapVue from 'bootstrap-vue';
-// Vue.use(BootstrapVue);
+//support vuex
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+import store from "./store"
+
+import BootstrapVue from 'bootstrap-vue';
+Vue.use(BootstrapVue);
 
 new Vue({
     el: '#app',
     router,
+    store,
     render: h => h(App)
 });
