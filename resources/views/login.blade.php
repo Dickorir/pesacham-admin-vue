@@ -15,7 +15,6 @@
     <!-- App styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/app.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" type="text/css">
-    @laravelPWA
 
 
 </head>
@@ -31,7 +30,7 @@
 
     <h5>Sign in</h5>
     <div id="app">
-        <Login />
+        <login-form></login-form>
     </div>
 
 

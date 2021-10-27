@@ -1,8 +1,8 @@
 <template>
-    <div class="content">
+    <div class="">
         <div class="page-header">
             <div>
-                <h3>E-commerce</h3>
+                <h3>E-commercesa</h3>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">

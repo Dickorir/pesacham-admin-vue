@@ -3,7 +3,7 @@
         <div class="navigation-menu-body" id="navigation">
             <ul>
                 <li>
-                    <router-link to="#" class="load">
+                    <router-link to="/home" class="load">
                             <span class="nav-link-icon">
                                 <pie-chart-icon size="1.5x" className="custom-class"></pie-chart-icon>
                             </span>
@@ -11,33 +11,11 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="#" class="">
-                            <span class="nav-link-icon">
-                                <users-icon size="1.5x" className="custom-class"></users-icon>
-                            </span>
-                        <span>Groups</span>
-                    </router-link>
-                    <ul>
-                        <li>
-                            <router-link to="" class="">Group Types</router-link>
-                        </li>
-                        <li>
-                            <router-link to="" class="">Groups</router-link>
-                        </li>
-                        <li>
-                            <router-link to="" class="">Subgroups</router-link>
-                        </li>
-                        <li>
-                            <router-link to="" class="">Revolutions</router-link>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <router-link to="#" class="">
+                    <router-link to="/orders" class="">
                             <span class="nav-link-icon">
                                 <i class="fa fa-user"></i>
                             </span>
-                        <span>Members</span>
+                        <span>Orders</span>
                     </router-link>
                 </li>
                 <li>
