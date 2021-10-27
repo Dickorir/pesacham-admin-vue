@@ -115,15 +115,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      editMode: false,
       products: []
     };
   },
+  computed: {
+    getAllOrders: {
+      get: function get() {
+        return this.$store.state.theOrders.orders;
+      }
+    }
+  },
   created: function created() {
-    var _this = this;
-
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get('http://bursary_v2.io/api/v1/periods').then(function (response) {
-      _this.products = response.data.data;
-    });
+    this.$store.dispatch('theOrders/getOrders'); // axios
+    //     .get('http://bursary_v2.io/api/v1/periods')
+    //     .then(response => {
+    //         this.products = response.data.data;
+    //     });
   },
   methods: {
     openModalWindow: function openModalWindow() {
@@ -243,7 +251,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "tbody",
-                        _vm._l(_vm.products, function(product) {
+                        _vm._l(_vm.getAllOrders, function(product) {
                           return _c("tr", { key: product.id }, [
                             _c("td", { staticClass: "text-center" }, [
                               _vm._v("3")

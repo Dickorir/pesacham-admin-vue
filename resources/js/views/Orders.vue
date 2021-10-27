@@ -40,7 +40,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr v-for="product in products" :key="product.id">
+                                    <tr v-for="product in getAllOrders" :key="product.id">
                                         <td class="text-center">3</td>
                                         <td>{{ product.id }}</td>
                                         <td class="text-capitalize">{{ product.year }}</td>
@@ -101,15 +101,25 @@ import axios from "axios";
 export default {
     data() {
         return {
+            editMode: false,
             products: []
         }
     },
+    computed: {
+      getAllOrders: {
+          get() {
+              return this.$store.state.theOrders.orders;
+          }
+      }
+    },
     created() {
-        axios
-            .get('http://bursary_v2.io/api/v1/periods')
-            .then(response => {
-                this.products = response.data.data;
-            });
+        this.$store.dispatch('theOrders/getOrders')
+
+        // axios
+        //     .get('http://bursary_v2.io/api/v1/periods')
+        //     .then(response => {
+        //         this.products = response.data.data;
+        //     });
     },
     methods: {
         openModalWindow(){
